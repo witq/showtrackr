@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="ShowTrackr">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShowTrackr</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png"/>
+
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/src/vendor/bootstrap/dist/css/bootstrap.css">
+  <!-- endbower -->
+
+  <!-- app:css -->
+  <!-- endapp -->
+
+</head>
+<body>
+
+  <div ng-view></div>
+
+  <!-- build:js(./) vendors.js -->
+  <!-- bower:js -->
+  <script src="/src/vendor/angular/angular.js"></script>
+  <script src="/src/vendor/jquery/dist/jquery.js"></script>
+  <script src="/src/vendor/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- app:js -->
+  <script src="/src/app/common/common.js"></script>
+  <script src="/src/app/common/directive/directive.js"></script>
+  <script src="/src/app/app.js"></script>
+  <!-- endapp -->
+
+</body>
+</html>
