@@ -8,31 +8,46 @@
   <title>ShowTrackr</title>
   <link rel="icon" type="image/png" href="assets/favicon.png"/>
 
+  <!-- build:css(./) styles/vendors.min.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="/src/vendor/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/src/vendor/angular-motion/dist/angular-motion.min.css">
   <!-- endbower -->
+  <!-- endbuild -->
 
+  <!-- build:css(./) styles/app.min.css -->
   <!-- app:css -->
   <!-- endapp -->
+  <!-- endbuild -->
 
 </head>
 <body>
 
   <div ng-view></div>
 
-  <!-- build:js(./) vendors.js -->
+  <!-- build:js(./) scripts/vendors.min.js -->
   <!-- bower:js -->
-  <script src="/src/vendor/angular/angular.js"></script>
   <script src="/src/vendor/jquery/dist/jquery.js"></script>
+  <script src="/src/vendor/angular/angular.js"></script>
+  <script src="/src/vendor/angular-animate/angular-animate.js"></script>
+  <script src="/src/vendor/angular-resource/angular-resource.js"></script>
+  <script src="/src/vendor/angular-route/angular-route.js"></script>
+  <script src="/src/vendor/angular-cookies/angular-cookies.js"></script>
+  <script src="/src/vendor/angular-messages/angular-messages.js"></script>
+  <script src="/src/vendor/moment/moment.js"></script>
   <script src="/src/vendor/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/src/vendor/angular-strap/dist/angular-strap.min.js"></script>
+  <script src="/src/vendor/angular-strap/dist/angular-strap.tpl.min.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
+  <!-- build:js(./) scripts/app.min.js -->
   <!-- app:js -->
   <script src="/src/app/common/common.js"></script>
   <script src="/src/app/common/directive/directive.js"></script>
   <script src="/src/app/app.js"></script>
   <!-- endapp -->
+  <!-- endbuild -->
 
 </body>
 </html>

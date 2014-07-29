@@ -4,7 +4,7 @@
 
   angular
     .module('myApp.common')
-    .directive('megatron', function() {
+    .directive('megatron', function($http) {
       return {
 
       };
