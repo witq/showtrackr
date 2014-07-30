@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('myApp.common')
+    .module('ShowTrackr.common')
     .directive('megatron', function($http) {
       return {
 

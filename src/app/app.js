@@ -3,10 +3,9 @@
   'use strict';
 
   angular
-    .module('myApp', [
+    .module('ShowTrackr', [
       'ngRoute',
-      'myApp.common',
-      'myApp.home'
+      'ShowTrackr.common'
     ])
     .config(function($routeProvider) {
 
