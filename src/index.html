@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="ShowTrackr">
+<html ng-app="ShowTrackr" ng-controller="AppController">
 <head>
   <base href="/">
   <meta charset="utf-8">
@@ -8,11 +8,11 @@
   <title>ShowTrackr</title>
   <link rel="icon" type="image/png" href="assets/favicon.png"/>
 
-  <!-- build:css(./) styles/vendors.min.css -->
+  <!-- build:css(./public) styles/vendors.min.css -->
   <!-- bower:css -->
   <!-- endbower -->
   <!-- endbuild -->
-  <!-- build:css(./) styles/app.min.css -->
+  <!-- build:css(./public) styles/app.min.css -->
   <!-- app:css -->
   <!-- endapp -->
   <!-- endbuild -->
@@ -22,11 +22,11 @@
 
   <div ng-view></div>
 
-  <!-- build:js(./) scripts/vendors.min.js -->
+  <!-- build:js(./public) scripts/vendors.min.js -->
   <!-- bower:js -->
   <!-- endbower -->
   <!-- endbuild -->
-  <!-- build:js(./) scripts/app.min.js -->
+  <!-- build:js(./public) scripts/app.min.js -->
   <!-- app:js -->
   <!-- endapp -->
   <!-- endbuild -->
