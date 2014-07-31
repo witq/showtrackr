@@ -18,7 +18,7 @@
     .config(function($locationProvider, $routeProvider) {
 
       $locationProvider
-        .html5Mode(false);
+        .html5Mode(true);
 
       $routeProvider
         .otherwise({

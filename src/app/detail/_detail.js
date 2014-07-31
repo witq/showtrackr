@@ -9,7 +9,7 @@
         .when('/shows/:id', {
           templateUrl: 'app/detail/detail.tpl.html',
           controller: 'DetailController',
-          controllerAs: 'detail'
+          controllerAs: 'view'
         });
     });
 
