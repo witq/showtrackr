@@ -18,7 +18,6 @@
       uglify          = require('gulp-uglify'),
       usemin          = require('gulp-usemin'),
 
-      files,
       paths;
 
   paths = {
@@ -37,7 +36,7 @@
   gulp.task('watch', ['build'], function() {
     livereload.listen();
     gulp.watch(paths.src + '/styles/**/*.less', ['watch-less']);
-    gulp.watch(paths.src + '/app/**/*.js', ['watch-app']);
+    gulp.watch([paths.src + '/app/**/*.js', paths.src + '/app/**/*.html'], ['watch-app']);
   });
 
   gulp.task('watch-less', function() {
@@ -51,7 +50,7 @@
 
   gulp.task('watch-app', function() {
     return gulp
-      .src([paths.src + '/**/*.js', '!' + paths.src + '/vendor/**/*'], {read: true})
+      .src([paths.src + '/**/*.js', paths.src + '/**/*.html', '!' + paths.src + '/vendor/**/*'], {read: true})
       .pipe(changed(paths.dest))
       .pipe(gulp.dest(paths.dest))
       .pipe(livereload());

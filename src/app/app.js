@@ -4,10 +4,21 @@
 
   angular
     .module('ShowTrackr', [
+      'ngCookies',
+      'ngResource',
       'ngRoute',
-      'ShowTrackr.common'
+      'mgcrea.ngStrap',
+      'ShowTrackr.common',
+      'ShowTrackr.home',
+      'ShowTrackr.detail',
+      'ShowTrackr.add',
+      'ShowTrackr.login',
+      'ShowTrackr.signup'
     ])
-    .config(function($routeProvider) {
+    .config(function($locationProvider, $routeProvider) {
+
+      $locationProvider
+        .html5Mode(false);
 
       $routeProvider
         .otherwise({
@@ -15,10 +26,10 @@
         });
 
     })
-    .controller('AppController', function($scope) {
+    .controller('AppController', AppController);
 
-      // global app logic goes here (page title, navigation etc.)
-
-    });
+  function AppController() {
+    console.log('app loaded');
+  }
 
 })();

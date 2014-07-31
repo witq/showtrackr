@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="ShowTrackr" ng-controller="AppController">
+<html ng-app="ShowTrackr" ng-controller="AppController as app">
 <head>
   <base href="/">
   <meta charset="utf-8">
@@ -19,6 +19,26 @@
 
 </head>
 <body>
+
+  <div class="navbar navbar-default navbar-static-top"role="navigation" bs-navbar>
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span class="glyphicon glyphicon-film"></span>
+        Show<strong>Trackr</strong></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li data-match-route="/home"><a href="#/home">Home</a></li>
+      <li data-match-route="/add"><a href="#/add">Add</a></li>
+    </ul>
+    <ul class="nav navbar-nav pull-right" ng-if="!app.currentUser">
+      <li data-match-route="/login"><a href="#/login">Login</a></li>
+      <li data-match-route="/signup"><a href="#/signup">Sign up</a></li>
+    </ul>
+    <ul class="nav navbar-nav pull-right" ng-if="app.currentUser">
+      <li class="navbar-text" ng-bind="app.currentUser.email"></li>
+      <li><a href="" ng-click="logout()">Logout</a></li>
+    </ul>
+  </div>
 
   <div ng-view></div>
 
